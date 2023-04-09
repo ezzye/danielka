@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Linear Equations Plotter</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .slider {
+      margin: 20px;
+      width: 200px;
+    }
+    .graph {
+      margin: 20px;
+      width: 500px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="slider">
+    <label for="a-slider">a = <span id="a-value">1</span></label>
+    <input type="range" id="a-slider" min="-10" max="10" step="0.1" value="1">
+  </div>
+  <div class="slider">
+    <label for="b-slider">b = <span id="b-value">1</span></label>
+    <input type="range" id="b-slider" min="-10" max="10" step="0.1" value="1">
+  </div>
+  <div class="slider">
+    <label for="c-slider">c = <span id="c-value">0</span></label>
+    <input type="range" id="c-slider" min="-10" max="10" step="0.1" value="0">
+  </div>
+  <div class="slider">
+    <label for="d-slider">d = <span id="d-value">0</span></label>
+    <input type="range" id="d-slider" min="-10" max="10" step="0.1" value="0">
+  </div>
+</div>
+<div class="container">
+  <div class="graph" id="linear1-plot"></div>
+  <div class="graph" id="linear2-plot"></div>
+  <div class="graph" id="quadratic-plot"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
+<script src="plotter.js"></script>
+</body>
+</html>
